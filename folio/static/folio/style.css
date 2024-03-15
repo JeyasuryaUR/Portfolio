@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url("../folio/fonts/norwester.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Kollektif';
+    src: url("../folio/fonts/Kollektif.ttf") format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Setting up the color palette */
+:root {
+    --dark-grey: #222831;
+    --grey: #31363F;
+    --teal: #76ABAE;
+    --white: #EEEEEE;
+}
+
+/* Applying the dark theme */
+body {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling the navbar */
+.navbar.is-dark {
+    background-color: var(--grey);
+    padding: 12px;
+}
+
+/* Styling links */
+a {
+    color: var(--teal);
+    font-family: 'Kollektif', sans-serif;
+}
+
+/* Styling headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--teal);
+    font-family: 'Norwester', sans-serif;
+}
+
+.navlogo {
+    font-family: 'Norwester', sans-serif;
+    font-size: larger;
+}

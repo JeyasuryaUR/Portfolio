@@ -1,20 +1,48 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
+<header>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item navlogo" href="#"> Jeyasurya U R </a>
 
-{% block content %}
-<section class="section">
-    <div class="container">
-        <h1 class="title">
-            <!-- Replace with your name or title -->
-            Your Name
-        </h1>
-        <p class="subtitle">
-            <!-- Replace with your subtitle or profession -->
-            Your Profession
-        </p>
-        <div class="content">
-            <!-- Replace with your content -->
-            <p>Your Content Here</p>
-        </div>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-</section>
+
+    <div id="navbarBasicExample" class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item"> Home </a>
+
+        <a class="navbar-item"> About </a>
+
+        <a class="navbar-item"> Portfolio </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a
+              class="button is-primary"
+              href="/media/Resume-JS.pdf"
+              ,
+              target="_blank"
+            >
+              <strong>My Resume</strong>
+            </a>
+            <a class="button is-light"> Contact Me </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
 {% endblock %}
