@@ -25,10 +25,10 @@
     <div id="navigation" class="navbar-menu">
       <div class="navbar-end">
         <a href="{{ url_for('home') }}" class="navbar-item">Home</a>
-        <a href="{{ url_for('about') }}" class="navbar-item">About</a>
-        <a href="{{ url_for('blog') }}" class="navbar-item">blog</a>
-        <a href="{{ url_for('portfolio') }}" class="navbar-item">portfolio</a>
-        <a href="{{ url_for('contact') }}" class="navbar-item">contact</a>
+        <a href="#about" class="navbar-item">About</a>
+        <a href="#blog" class="navbar-item">blog</a>
+        <a href="#portfolio" class="navbar-item">portfolio</a>
+        <a href="#contact" class="navbar-item">contact</a>
       </div>
     </div>
   </nav>
@@ -51,49 +51,49 @@
   </div>
   <div class="layer" id="l2">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/dots-cyan.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/dots-cyan.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l3">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/leaf-orange.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/leaf-orange.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l4">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/dots-orange.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/dots-orange.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l5">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/leaf-yellow.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/leaf-yellow.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l6">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/leaf-cyan.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/leaf-cyan.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l7">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/dots-group-orange.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/dots-group-orange.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l8">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/leaf-pink-round.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/leaf-pink-round.png') }}"
       alt="bg-shape"
     />
   </div>
   <div class="layer" id="l9">
     <img
-      src="{{ url_for('static', filename='folio/images/illustrations/leaf-cyan-2.png') }}"
+      src="{{ url_for('static', filename='images/illustrations/leaf-cyan-2.png') }}"
       alt="bg-shape"
     />
   </div>
@@ -121,7 +121,7 @@
           I've contributed to the development of a dairy products e-commerce Android app and have a portfolio that includes four small scale Web apps and one Android app. My unique blend of technical proficiency and aesthetics has led me to undertake freelance projects, crafting unique brand kits for small businesses. Beyond coding and design, I'm an avid chess player, passionate about the game as a hobby.
           <br />
         </p>
-        <a href="{{ url_for('about') }}" class="button is-link">know more</a>
+        <a href="#about" class="button is-link">know more</a>
       </div>
     </div>
   </div>
@@ -138,7 +138,7 @@
       {% for skill in skills %}
       <div class="column is-3-desktop is-4-tablet is-6-mobile ">
         <div class="card shadow has-text-centered">
-          <div class="is-relative rounded-top html-css-skill skill-embed" data-background="{{ url_for('static', filename='folio/images/skills/' + skill.image) }}">
+          <div class="is-relative rounded-top html-css-skill skill-embed" data-background="{{ url_for('static', filename='images/skills/' + skill.image) }}">
           <div class="progress-wrapper" data-color="{{skill.color}}">
             <div class="wave" data-progress="{{skill.level}}%"></div>
           </div>
