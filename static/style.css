@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Norwester';
-    src: url("../folio/fonts/norwester.otf") format('opentype');
+    src: url("../fonts/norwester.otf") format('opentype');
 }
 
 @font-face {
     font-family: 'Kollektif';
-    src: url("../folio/fonts/Kollektif.ttf") format('truetype');
+    src: url("../fonts/Kollektif.ttf") format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -61,78 +61,114 @@ h6 {
 }
 
 
-h1,
-.h1 {
-    font-size: 80px;
+h1, .h1 {
+    font-size: 4.5rem;
 }
 
-@media (max-width: 991px) {
+h2, .h2 {
+    font-size: 3.5rem;
+}
 
-    h1,
-    .h1 {
-        font-size: 65px;
+h3, .h3 {
+    font-size: 2.5rem;
+}
+
+h4, .h4 {
+    font-size: 2rem;
+}
+
+h5, .h5 {
+    font-size: 1.5rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+/* For tablets: */
+@media only screen and (max-width: 768px) {
+    h1, .h1 {
+        font-size: 3.5rem;
+    }
+
+    h2, .h2 {
+        font-size: 2.5rem;
+    }
+
+    h3, .h3 {
+        font-size: 2rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.5rem;
+    }
+
+    h5, .h5 {
+        font-size: 1.25rem;
+    }
+
+    h6, .h6 {
+        font-size: 1rem;
     }
 }
 
-h2,
-.h2 {
-    font-size: 60px;
-}
-
-@media (max-width: 991px) {
-
-    h2,
-    .h2 {
-        font-size: 50px;
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+    h1, .h1 {
+        font-size: 2.5rem;
     }
-}
 
-h3,
-.h3 {
-    font-size: 40px;
-}
+    h2, .h2 {
+        font-size: 2rem;
+    }
 
-h4,
-.h4 {
-    font-size: 22px;
-}
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
 
-h5,
-.h5 {
-    font-size: 18px;
-}
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
 
-h6,
-.h6 {
-    font-size: 14px;
+    h5, .h5 {
+        font-size: 1rem;
+    }
+
+    h6, .h6 {
+        font-size: 0.875rem;
+    }
 }
 
 .font-one {
-    font-family: 'Norwester', sans-serif;
+    font-family: 'Norwester', sans-serif  !important;
 }
 
 .font-two {
-    font-family: 'Kollektif', sans-serif;
+    font-family: 'Kollektif', sans-serif  !important;
 }
 
 .font-three {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif  !important;
 }
 
 .color-one {
-    color: var(--teal);
+    color: var(--teal)  !important;
 }
 
 .color-two {
-    color: var(--teal2);
+    color: var(--teal2)  !important;
 }
 
 .color-three {
-    color: var(--teal3);
+    color: var(--teal3)  !important;
 }
 
 .has-text-white {
     color: var(--white) !important;
+}
+
+.has-background-white {
+    background-color: var(--white) !important;
 }
 
 /* Button style */
@@ -303,6 +339,23 @@ select:focus {
     z-index: 1;
 }
 
+.layer-img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+@media only screen and (max-width: 768px) {
+    .layer-img {
+        max-width: 80%; /* Adjust as needed */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .layer-img {
+        max-width: 60%; /* Adjust as needed */
+    }
+}
+
 #l1 {
     bottom: 0;
     left: 0;
@@ -422,20 +475,68 @@ textarea.input {
     font-size: larger;
 }
 
+/* Hero Section */
 .list-hero-social {
     position: relative;
-    z-index: 1;
-    background: transparent;
+    z-index: 10;
     box-shadow: none;
     border: none;
     width: 40px;
-    margin: 30px 0 0 50px;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .list-hero-social .list-item {
-    border: none;
-    background: transparent;
+    border-radius: 50px;
+    background: linear-gradient(225deg, #1f242c, #242b34);
+    box-shadow:  -20px 20px 60px #1d222a,
+                20px -20px 60px #272e38;
+    margin: 0 4px 10px 4px; /* Add space between icons */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 16px 28px;
 }
+
+.list-hero-social .list-item i {
+    font-size: 24px; /* Increase icon size */
+}
+
+.hero-img-wrap {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-img-wrap .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.2);
+    position: absolute;
+}
+
+/* Change flex direction to row for mobile or tablet devices */
+@media screen and (max-width: 768px) {
+    .list-hero-social {
+        flex-direction: row;
+    }
+
+    .hero-img-wrap {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+/* END Hero Section */
 
 .buttons .button input {
     width: 0;
@@ -480,15 +581,11 @@ textarea.input {
 }
 
 .hero-area {
-    padding: 300px 0 200px;
+    height: 100vh;
     position: relative;
-}
-
-@media (max-width: 767px) {
-    .hero-area {
-        padding: 250px 0 150px;
-        overflow: hidden;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-area h1 {
@@ -496,9 +593,14 @@ textarea.input {
     z-index: 2;
 }
 
-
-
 /* skills */
+.neumorphic-card {
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1f242c, #242b34);
+    box-shadow:  20px 20px 60px #1d222a,
+                -20px -20px 60px #272e38;
+    overflow: hidden;
+}
 .progress-wrapper {
     height: 130px;
     overflow: hidden;
@@ -565,10 +667,7 @@ textarea.input {
   }
 
 .skill-embed {
-    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -588,3 +687,61 @@ textarea.input {
     z-index: 20;
 }
   /* /skills */
+
+  /* education */
+  .edu-card {
+    height: 25vh;
+    border-radius: 20px;
+    background: #eeeeee;
+    box-shadow:  20px 20px 60px #cacaca,
+                -20px -20px 60px #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.edu-img-wrap {
+    width: 40%;
+    height: 100%; /* Add this line */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.edu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.year-display {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    align-self: center;
+    font-size: 150%;
+    letter-spacing: 3px;
+    color: #dddddd;
+}
+
+@media screen and (max-width: 425px) {
+    .year-display {
+        font-size: 120%;
+        letter-spacing: 2px;
+    }
+}
+  /* /education */
+
+
+/* .section {
+    animation: fade-down 1s ease;
+}
+
+  @keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translate(-30px) scale(0.9);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0px) scale(1);
+    }
+} */

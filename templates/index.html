@@ -1,5 +1,4 @@
-{% extends "layout.html" %} 
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <header>
   <nav
     class="navbar is-dark is-fixed-top"
@@ -37,91 +36,116 @@
 <!-- hero area -->
 <section class="hero-area" id="parallax">
   <div class="container">
-    <div class="columns">
-      <div class="column is-11-desktop is-offset-1 is-offset-1-mobile">
-        <h2 class="has-text-white font-two">Hey! I’m</h2>
-        <h1 class="color-three font-one">
-            Jeyasurya U R
-        </h1>
+    <div class="columns is-vcentered is-multiline">
+      <div class="column is-5-desktop is-offset-1-desktop is-12-mobile has-text-centered-mobile">
+        <h1 class="color-three font-one">Jeyasurya U R</h1>
         <h2 class="has-text-white font-two">
           <span class="auto-typed is-underlined">Full Stack Developer</span>
         </h2>
       </div>
+
+      <div class="hero-img-wrap column is-3-desktop is-6-mobile ">
+        <img
+          src="{{ url_for('static', filename='images/Full.jpeg') }}"
+          alt="JeyasuryaUR"
+          class="hero-image"
+        />
+      </div>
+
+      <!-- social icon -->
+      <div class="column is-1-desktop is-12-mobile list list-hero-social">
+        <a class="list-item has-text-white" href="#"><i class="ti ti-linkedin"></i></a>
+        <a class="list-item has-text-white" href="#"><i class="ti ti-github"></i></a>
+        <a class="list-item has-text-white" href="#"><i class="ti ti-instagram"></i></a>
+        <a class="list-item has-text-white" href="#"><i class="ti ti-twitter"></i></a>
+      </div>
+      <!-- /social icon -->
     </div>
   </div>
+  <!--
   <div class="layer" id="l2">
     <img
       src="{{ url_for('static', filename='images/illustrations/dots-cyan.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l3">
     <img
       src="{{ url_for('static', filename='images/illustrations/leaf-orange.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l4">
     <img
       src="{{ url_for('static', filename='images/illustrations/dots-orange.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l5">
     <img
       src="{{ url_for('static', filename='images/illustrations/leaf-yellow.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l6">
     <img
       src="{{ url_for('static', filename='images/illustrations/leaf-cyan.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l7">
     <img
       src="{{ url_for('static', filename='images/illustrations/dots-group-orange.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l8">
     <img
       src="{{ url_for('static', filename='images/illustrations/leaf-pink-round.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
   <div class="layer" id="l9">
     <img
       src="{{ url_for('static', filename='images/illustrations/leaf-cyan-2.png') }}"
       alt="bg-shape"
+      class="layer-img"
     />
   </div>
-  <!-- social icon -->
-  <div class="list list-hero-social">
-    <a class="list-item has-text-white" href="#"><i class="ti-facebook"></i></a>
-    <a class="list-item has-text-white" href="#"
-      ><i class="ti-instagram"></i
-    ></a>
-    <a class="list-item has-text-white" href="#"><i class="ti-dribbble"></i></a>
-    <a class="list-item has-text-white" href="#"><i class="ti-twitter"></i></a>
-  </div>
-  <!-- /social icon -->
+  -->
 </section>
 <!-- /hero area -->
 
 <!-- about -->
-<section class="section has-background-light">
+<section class="section has-background-white">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-four-fifths-desktop has-text-centered">
         <p class="font-two paragraph-lg has-text-dark">
-          I am a versatile Full Stack Developer with a strong focus on Video Editing. My technical skills extend to C++, Python, C, Java, and JavaScript. Alongside my programming expertise, I have a creative flair for design.
-          <br/> <br/>
-          I've contributed to the development of a dairy products e-commerce Android app and have a portfolio that includes four small scale Web apps and one Android app. My unique blend of technical proficiency and aesthetics has led me to undertake freelance projects, crafting unique brand kits for small businesses. Beyond coding and design, I'm an avid chess player, passionate about the game as a hobby.
+          I am a versatile Full Stack Developer with a strong focus on Video
+          Editing. My technical skills extend to C++, Python, C, Java, and
+          JavaScript. Alongside my programming expertise, I have a creative
+          flair for design.
+          <br />
+          <br />
+          <span class="is-hidden-mobile">
+            I've contributed to the development of a dairy products e-commerce
+            Android app and have a portfolio that includes four small scale Web
+            apps and one Android app. My unique blend of technical proficiency and
+            aesthetics has led me to undertake freelance projects, crafting unique
+            brand kits for small businesses. Beyond coding and design, I'm an avid
+            chess player, passionate about the game as a hobby.
+          </span>
           <br />
         </p>
-        <a href="#about" class="button is-link">know more</a>
+        <a href="#about" class="button is-link color-one">know more</a>
       </div>
     </div>
   </div>
@@ -129,23 +153,26 @@
 <!-- /about -->
 
 <!-- skills -->
-<section class="section has-background-light">
+<section class="section">
   <div class="container">
     <div class="has-text-centered">
-      <h2 class="section-title has-text-dark">Skills</h2>
+      <h2 class="section-title">Skills</h2>
     </div>
     <div class="columns is-multiline is-flex-mobile">
       {% for skill in skills %}
-      <div class="column is-3-desktop is-4-tablet is-6-mobile ">
-        <div class="card shadow has-text-centered">
-          <div class="is-relative rounded-top html-css-skill skill-embed" data-background="{{ url_for('static', filename='images/skills/' + skill.image) }}">
-          <div class="progress-wrapper" data-color="{{skill.color}}">
-            <div class="wave" data-progress="{{skill.level}}%"></div>
+      <div class="column is-3-desktop is-4-tablet is-6-mobile">
+        <div class="card shadow has-text-centered neumorphic-card">
+          <div
+            class="is-relative rounded-top html-css-skill skill-embed"
+            data-background="{{ url_for('static', filename='images/skills/' + skill.image) }}"
+          >
+            <div class="progress-wrapper" data-color="{{skill.color}}">
+              <div class="wave" data-progress="{{skill.level}}%"></div>
+            </div>
+            <span class="skill-score">{{skill.score}}/10</span>
           </div>
-          <span class="skill-score">{{skill.score}}/10</span>
-        </div>
-          <div class="card-content has-background-white">
-            <h4 class="has-text-black">{{skill.name}}</h4>
+          <div class="card-content">
+            <h4 class="has-text-white">{{skill.name}}</h4>
           </div>
         </div>
       </div>
@@ -154,4 +181,35 @@
   </div>
 </section>
 <!-- /skills -->
+
+<!-- education -->
+<section class="section is-relative has-background-white">
+  <div class="container">
+    <div class="has-text-centered">
+      <h2 class="section-title has-text-black">Education</h2>
+    </div>
+    <div class="columns is-multiline">
+      {% for edu in education %}
+      <div class="column is-10 is-offset-1 mb-80">
+        <div class="media card edu-card py-2 is-relative">
+          
+          <div class="media-right mr-2 edu-img-wrap">
+            <img src="{{ url_for('static', filename='images/edu/' + edu.image) }}" alt="{{edu.name}}" class="card-image edu-img">
+          </div>
+          <div class="media-content ">
+            <h5 class="font-two color-one">{{edu.name}} ({{edu.course}})</h5>
+            <p class="mb-0 has-text-dark font-two">{{edu.institute}}</p>
+            <p class="mb-0 has-text-dark font-three">{{edu.location}}</p>
+            <p class="mb-0 has-text-grey font-two ">{{edu.score|safe}}</p>
+          </div>
+          <div class="year-display font-one mr-2">{{edu.year}}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /education -->
+
+
 {% endblock %}

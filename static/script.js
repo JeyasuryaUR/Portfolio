@@ -179,4 +179,8 @@
 		$(this).addClass("is-active").siblings().removeClass('is-active');
 	});
 
+	ScrollReveal().reveal('.section', {delay: 200, interval: 50});
+	ScrollReveal().reveal('.card', {delay: 200, reset: true, interval: 50});
+	ScrollReveal().reveal('.list-hero-social a', {reset: true, interval: 20});
+
 })(jQuery);
