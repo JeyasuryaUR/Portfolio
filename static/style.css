@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Norwester';
-    src: url("../fonts/norwester.otf") format('opentype');
+    src: url("./fonts/norwester.otf") format('opentype');
 }
 
 @font-face {
     font-family: 'Kollektif';
-    src: url("../fonts/Kollektif.ttf") format('truetype');
+    src: url("./fonts/Kollektif.ttf") format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -334,79 +334,6 @@ select:focus {
     color: #c8d5ef;
 }
 
-.layer {
-    position: absolute;
-    z-index: 1;
-}
-
-.layer-img {
-    max-width: 100%; 
-    height: auto; 
-}
-
-@media only screen and (max-width: 768px) {
-    .layer-img {
-        max-width: 80%; /* Adjust as needed */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .layer-img {
-        max-width: 60%; /* Adjust as needed */
-    }
-}
-
-#l1 {
-    bottom: 0;
-    left: 0;
-}
-
-#l2 {
-    top: 190px;
-    left: -250px;
-}
-
-#l3 {
-    top: 200px;
-    left: 40%;
-}
-
-#l4 {
-    top: 200px;
-    right: 40%;
-}
-
-#l5 {
-    top: 100px;
-    right: -150px;
-}
-
-#l6 {
-    bottom: -20px;
-    left: 10%;
-}
-
-#l7 {
-    bottom: 100px;
-    left: 20%;
-}
-
-#l8 {
-    bottom: 160px;
-    right: 45%;
-}
-
-#l9 {
-    bottom: 100px;
-    right: -10px;
-}
-
-.layer-bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 
 /* /icon */
 /* slick slider */
@@ -730,18 +657,42 @@ textarea.input {
 }
   /* /education */
 
-
-/* .section {
-    animation: fade-down 1s ease;
-}
-
-  @keyframes fade-down {
-    0%{
-        opacity: 0;
-        transform: translate(-30px) scale(0.9);
-    }
-    100%{
-        opacity:1;
-        transform: translate(0px) scale(1);
-    }
-} */
+/* portfolio */
+.hover-wrapper {
+    overflow: hidden;
+  }
+  .hover-wrapper img {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+  }
+  .hover-wrapper:hover img {
+    transform: scale(1);
+  }
+  .hover-wrapper:hover .hover-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .hover-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  /* /portfolio */

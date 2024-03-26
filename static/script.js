@@ -54,12 +54,11 @@
 
 
 	/* ########################################### hero parallax ############################################## */
+	/*
 	window.onload = function () {
 
 		var parallaxBox = document.getElementById('parallax');
 		var
-			/* c1left = document.getElementById('l1').offsetLeft,
-			           c1top = document.getElementById('l1').offsetTop, */
 			c2left = document.getElementById('l2').offsetLeft,
 			c2top = document.getElementById('l2').offsetTop,
 			c3left = document.getElementById('l3').offsetLeft,
@@ -82,7 +81,6 @@
 			var x = event.clientX - parallaxBox.offsetLeft,
 				y = event.clientY - parallaxBox.offsetTop;
 
-			/*  mouseParallax('l1', c1left, c1top, x, y, 5); */
 			mouseParallax('l2', c2left, c2top, x, y, 25);
 			mouseParallax('l3', c3left, c3top, x, y, 20);
 			mouseParallax('l4', c4left, c4top, x, y, 35);
@@ -103,6 +101,7 @@
 		obj.style.left = left - (((mouseX - (parseInt(obj.offsetWidth) / 2 + left)) / containerWidth) * speed) + 'px';
 		obj.style.top = top - (((mouseY - (parseInt(obj.offsetHeight) / 2 + top)) / containerHeight) * speed) + 'px';
 	}
+	*/
 	/* ########################################### /hero parallax ############################################## */
 
 	// testimonial-slider
@@ -155,8 +154,6 @@
 		]
 	});
 
-	/*
-
 	// Shuffle js filter and masonry
 	var Shuffle = window.Shuffle;
 	var jQuery = window.jQuery;
@@ -171,7 +168,7 @@
 		if (input.checked) {
 			myShuffle.filter(input.value);
 		}
-	});*/
+	});
 
 
 	// Check for click events on the navbar burger icon

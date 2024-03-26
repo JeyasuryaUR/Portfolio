@@ -39,7 +39,17 @@ def home():
             'image': 'sboa.webp', 'location': 'Anna Nagar, Chennai', 'score': 'HSC +2: 89.17% <br>HSC +1: 84%'},
     ]
 
-    return render_template('index.html', skills=skills, education=education)
+    themes = ['Full Stack Development', 'Video Editing', 'Graphic Design']
+
+    portfolio = [
+        {'name': 'Thought Capsule', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/ThoughtCapsule', 'tech': 'Django (Python)', 'image': 'ThoughtCapsule.jpg',
+         'desc': 'Thought Capsule is a minimalist web platform, enhanced with AI capabilities, designed for capturing, storing, and interpreting personal thoughts, ideas, and moments. Users can create digital capsules, each timestamped and presented in a clean and elegant format. The platform aims to interpret thoughts, emotions, and dreams of an individual for mind reading through AI, creating a digital persona to understand the character.'},
+         {'name': 'Djangy Bay', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/DjangoBay', 'tech': 'Django (Python)', 'image': 'DjangoBay.jpg',
+         'desc': 'eBay-like e-commerce auction site.'},
+         
+    ]
+
+    return render_template('index.html', skills=skills, education=education, portfolio=portfolio)
 
 
 if __name__ == '__main__':
