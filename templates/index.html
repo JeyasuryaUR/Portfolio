@@ -23,18 +23,19 @@
 
     <div id="navigation" class="navbar-menu">
       <div class="navbar-end">
-        <a href="{{ url_for('home') }}" class="navbar-item">Home</a>
         <a href="#about" class="navbar-item">About</a>
-        <a href="#blog" class="navbar-item">blog</a>
+        <a href="#skills" class="navbar-item">skills</a>
+        <a href="#education" class="navbar-item">education</a>
         <a href="#portfolio" class="navbar-item">portfolio</a>
         <a href="#contact" class="navbar-item">contact</a>
+        <a href="{{ url_for('static', filename='Resume-JS.pdf') }}" class="navbar-item has-background-white is-rounded box color-one">Download Resume</a>
       </div>
     </div>
   </nav>
 </header>
 
 <!-- hero area -->
-<section class="hero-area" id="parallax">
+<section class="hero-area home" id="parallax">
   <div class="container">
     <div class="columns is-vcentered is-multiline">
       <div
@@ -134,8 +135,11 @@
 <!-- /hero area -->
 
 <!-- about -->
-<section class="section has-background-white">
+<section class="section has-background-white" id="about">
   <div class="container">
+    <div class="has-text-centered">
+      <h2 class="section-title has-text-black">About</h2>
+    </div>
     <div class="columns is-centered">
       <div class="column is-four-fifths-desktop has-text-centered">
         <p class="font-two paragraph-lg has-text-dark">
@@ -155,7 +159,7 @@
           </span>
           <br />
         </p>
-        <a href="#about" class="button is-link color-one">know more</a>
+        <!--<a href="#about" class="button is-link color-one">know more</a>-->
       </div>
     </div>
   </div>
@@ -163,7 +167,7 @@
 <!-- /about -->
 
 <!-- skills -->
-<section class="section">
+<section class="section" id="skills">
   <div class="container">
     <div class="has-text-centered">
       <h2 class="section-title">Skills</h2>
@@ -193,7 +197,7 @@
 <!-- /skills -->
 
 <!-- education -->
-<section class="section is-relative has-background-white">
+<section class="section is-relative has-background-white " id="education">
   <div class="container">
     <div class="has-text-centered">
       <h2 class="section-title has-text-black">Education</h2>
@@ -225,16 +229,16 @@
 <!-- /education -->
 
 <!-- portfolio -->
-<section class="section">
+<section class="section " id="portfolio">
   <div class="container">
     <div class="has-text-centered">
       <h2 class="section-title">Portfolio</h2>
     </div>
-    <div class="columns is-multiline shuffle-wrapper">
+    <div class="columns is-multiline is-flex-mobile shuffle-wrapper">
       {% for work in portfolio %}
-      <div class="column is-4-desktop is-6-tablet mb-20 shuffle-item">
-        <div class="is-relative hover-wrapper neumorphic">
-          <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="image is-full" />
+      <div class="column is-4-desktop is-6-tablet shuffle-item">
+        <div class="m-2 card  portfolio-card">
+          <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="card-image is-full" />
           <div class="card-content">
             <h4 class="title is-4 has-text-white">{{work.name}}</h4>
             <p class="subtitle is-6 color-one">{{work.tech}}</p>
@@ -243,9 +247,13 @@
           </div>
         </div>
       </div>
+
       {% endfor %}
     </div>
   </div>
 </section>
+
+<section></section>
+
 <!-- /portfolio -->
 {% endblock %}

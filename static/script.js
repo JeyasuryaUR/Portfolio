@@ -180,4 +180,18 @@
 	ScrollReveal().reveal('.card', {delay: 200, reset: true, interval: 50});
 	ScrollReveal().reveal('.list-hero-social a', {reset: true, interval: 20});
 
+	$(document).ready(function(){
+		$('a').on('click', function(event) {
+		  if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+			  scrollTop: $(hash).offset().top
+			}, 800, function(){
+			  window.location.hash = hash;
+			});
+		  }
+		});
+	  });
+
 })(jQuery);

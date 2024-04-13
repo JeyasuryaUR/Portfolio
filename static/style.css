@@ -658,51 +658,14 @@ textarea.input {
   /* /education */
 
 /* portfolio */
-.neumorphic {
-    border-radius: 1em;
-    background: #222831;
-box-shadow: inset 20px 20px 60px #1d222a,
-            inset -20px -20px 60px #272e38;
-    color: var(--white);
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.portfolio-card {
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1f242c, #242b34);
+    box-shadow:  20px 20px 60px #1d222a,
+                -20px -20px 60px #272e38;
     overflow: hidden;
 }
 
-.neumorphic img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.8em;
-    margin-bottom: 1em;
-}
 
-.card-content {
-    padding: 1em 0;
-}
 
-.card-content h4 {
-    margin-bottom: 0.5em;
-}
-
-.card-content p {
-    margin-bottom: 0.5em;
-}
-
-.card-content a {
-    color: var(--white);
-    text-decoration: none;
-    background: var(--teal);
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    transition: background 0.3s ease;
-    align-self: flex-start;
-}
-
-.card-content a:hover {
-    background: var(--teal2);
-}
-  
   /* /portfolio */
