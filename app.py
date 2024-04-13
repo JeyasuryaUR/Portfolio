@@ -43,10 +43,13 @@ def home():
 
     portfolio = [
         {'name': 'Thought Capsule', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/ThoughtCapsule', 'tech': 'Django (Python)', 'image': 'ThoughtCapsule.jpg',
-         'desc': 'Thought Capsule is a minimalist web platform, enhanced with AI capabilities, designed for capturing, storing, and interpreting personal thoughts, ideas, and moments. Users can create digital capsules, each timestamped and presented in a clean and elegant format. The platform aims to interpret thoughts, emotions, and dreams of an individual for mind reading through AI, creating a digital persona to understand the character.'},
+         'desc': 'Thought Capsule is a minimalist web platform, enhanced with AI capabilities, designed for capturing, storing, and interpreting personal thoughts, ideas, and moments. '},
+         {'name': 'Synectt', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/SynecttWeb', 'tech': 'Django (Python)', 'image': 'SynnectWeb.jpg',
+         'desc': 'An event management app for Universities, Colleges and Schools. This project is used to integrate the Participant, Organiser, Sponsor, Control authorities in a single platform. Its right now just a prototype.'},
          {'name': 'Djangy Bay', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/DjangoBay', 'tech': 'Django (Python)', 'image': 'DjangoBay.jpg',
          'desc': 'eBay-like e-commerce auction site.'},
-         
+         {'name': 'Wiki Online Encyclopedia', 'stream': themes[0], 'src': 'https://github.com/JeyasuryaUR/WikiOnlineEncyclopedia', 'tech': 'Django (Python)', 'image': 'WikiEncl.jpg',
+         'desc': 'A Minimal Wikipedia Clone.'},
     ]
 
     return render_template('index.html', skills=skills, education=education, portfolio=portfolio)

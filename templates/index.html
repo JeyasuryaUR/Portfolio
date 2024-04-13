@@ -56,16 +56,16 @@
 
       <!-- social icon -->
       <div class="column is-1-desktop is-12-mobile list list-hero-social">
-        <a class="list-item has-text-white" href="#"
+        <a class="list-item has-text-white" href="https://www.linkedin.com/in/jeyasuryaur/"
           ><i class="ti ti-linkedin"></i
         ></a>
-        <a class="list-item has-text-white" href="#"
+        <a class="list-item has-text-white" href="https://github.com/JeyasuryaUR"
           ><i class="ti ti-github"></i
         ></a>
-        <a class="list-item has-text-white" href="#"
+        <a class="list-item has-text-white" href="https://instagram.com/jeyasurya.u.r"
           ><i class="ti ti-instagram"></i
         ></a>
-        <a class="list-item has-text-white" href="#"
+        <a class="list-item has-text-white" href="https://twitter.com/jeyasuryaur"
           ><i class="ti ti-twitter"></i
         ></a>
       </div>
@@ -233,19 +233,13 @@
     <div class="columns is-multiline shuffle-wrapper">
       {% for work in portfolio %}
       <div class="column is-4-desktop is-6-tablet mb-20 shuffle-item">
-        <div class="is-relative hover-wrapper ">
-          <img
-            src="{{ url_for('static', filename='images/portfolio/' + work.image)}}"
-            alt="{{work.name}}"
-            class="image is-full"
-          />
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <h4 class="color-one">{{work.name}}</h4>
-              <a class="button is-small is-light" href="{{work.src}}"
-                >view project</a
-              >
-            </div>
+        <div class="is-relative hover-wrapper neumorphic">
+          <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="image is-full" />
+          <div class="card-content">
+            <h4 class="title is-4 has-text-white">{{work.name}}</h4>
+            <p class="subtitle is-6 color-one">{{work.tech}}</p>
+            <p class="work-desc has-text-white">{{work.desc}}</p>
+            <a class="button is-small is-light color-black" href="{{work.src}}">view project</a>
           </div>
         </div>
       </div>
