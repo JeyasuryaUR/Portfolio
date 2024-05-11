@@ -175,7 +175,7 @@
     <div class="columns is-multiline is-flex-mobile">
       {% for skill in skills %}
       <div class="column is-3-desktop is-4-tablet is-6-mobile">
-        <div class="card shadow has-text-centered neumorphic-card">
+        <div class="card shadow has-text-centered skill-card">
           <div
             class="is-relative rounded-top html-css-skill skill-embed"
             data-background="{{ url_for('static', filename='images/skills/' + skill.image) }}"
@@ -256,4 +256,66 @@
 <section></section>
 
 <!-- /portfolio -->
+
+<!-- contact -->
+<section class="section has-background-white section-on-footer" data-background="{{ url_for('static', filename='images/BGs/bg-dots.png') }}">
+  <div class="container">
+    <div class="has-text-centered">
+      <h2 class="section-title has-text-black">Contact Info</h2>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8-desktop">
+        <div class="has-background-light card-content has-text-centered shadow-down">
+          <h4 class="mb-5 has-text-black">Contact Form</h4>
+          <form action="#" class="columns is-multiline is-centered">
+            <div class="column is-6-tablet">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="input">
+            </div>
+            <div class="column is-6-tablet">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="input">
+            </div>
+            <div class="column is-full">
+              <textarea name="message" id="message" class="input"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="column is-6-tablet is-10">
+              <button class="button is-primary is-fullwidth">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+
+<!-- footer -->
+<footer class="footer-section has-background-dark">
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4-tablet">
+          <h5 class="has-text-light font-two">Email</h5>
+          <p class="has-text-white paragraph-lg font-one">jeyasurya0206@gmail.com</p>
+        </div>
+        <div class="column is-4-tablet">
+          <h5 class="has-text-light font-two">Phone</h5>
+          <p class="has-text-white paragraph-lg font-one">+91 6385133480</p>
+        </div>
+        <div class="column is-4-tablet">
+          <h5 class="has-text-light font-two">Address</h5>
+          <p class="has-text-white paragraph-lg font-one">Anna Nagar West, Chennai</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section is-small has-text-centered has-border-top is-border-dark">
+    <p class="has-text-light font-two">©
+      <script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> JEYASURYA U R</a></p>
+  </div>
+</footer>
+<!-- /footer -->
 {% endblock %}

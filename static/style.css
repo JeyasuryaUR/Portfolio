@@ -171,6 +171,22 @@ h6, .h6 {
     background-color: var(--white) !important;
 }
 
+.has-background-dark {
+    background-color: var(--dark-grey) !important;
+}
+
+.neumorphic-dark {
+    background: linear-gradient(145deg, #1f242b, #242b33);
+    box-shadow:  20px 20px 60px #1d2229,
+                -20px -20px 60px #272e37;
+}
+
+.neumorphic-light {
+    background: #eeeeee;
+    box-shadow:  20px 20px 60px #cacaca,
+                -20px -20px 60px #ffffff;
+}
+
 /* Button style */
 .button {
     font-size: 22px;
@@ -521,7 +537,7 @@ textarea.input {
 }
 
 /* skills */
-.neumorphic-card {
+.skill-card {
     border-radius: 20px;
     background: linear-gradient(145deg, #1f242c, #242b34);
     box-shadow:  20px 20px 60px #1d222a,
@@ -666,6 +682,30 @@ textarea.input {
     overflow: hidden;
 }
 
-
-
   /* /portfolio */
+
+/* footer */
+.footer-section {
+    padding-top: 200px;
+  }
+  
+  .section-on-footer {
+    margin-bottom: -250px !important;
+  }
+  
+  .shadow-down {
+    position: relative;
+  }
+
+  .shadow-down::before {
+    position: absolute;
+    content: "";
+    box-shadow: 2px 2px 80.75px 14.25px rgba(224, 241, 255, 0.34);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  /* /footer */
