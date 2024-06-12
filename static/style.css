@@ -665,6 +665,17 @@ textarea.input {
     justify-content: space-between;
   }
 
+  @media (max-width: 426px) {
+    .edu-card h5{
+        font-size: 16px !important; 
+        line-height: 1.6 !important;
+    }
+    .edu-card p{
+        font-size: 14px !important; 
+        line-height: 1.4 !important;
+    }
+}
+
 .edu-img-wrap {
     width: 40%;
     height: 100%; /* Add this line */
@@ -685,7 +696,7 @@ textarea.input {
     align-self: center;
     font-size: 150%;
     letter-spacing: 3px;
-    color: #dddddd;
+    color: #d6d6d6;
 }
 
 @media screen and (max-width: 425px) {

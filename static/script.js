@@ -1,10 +1,3 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
-
 (function ($) {
 	'use strict';
 
@@ -182,7 +175,8 @@
 	});
 
 	ScrollReveal().reveal('.section', {delay: 200, interval: 50});
-	ScrollReveal().reveal('.card', {delay: 200, reset: true, interval: 50});
+	ScrollReveal().reveal('#skills .card', {delay: 200, reset: true, interval: 50});
+	ScrollReveal().reveal('#portfolio .card', {delay: 200, interval: 50});
 	ScrollReveal().reveal('.list-hero-social a', {reset: true, interval: 20});
 
 	$(document).ready(function(){
