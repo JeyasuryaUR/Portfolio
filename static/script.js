@@ -8,10 +8,15 @@
 (function ($) {
 	'use strict';
 
-	// Check for click events on the navbar burger icon
+	// Bulma CSS Config
 	$(".navbar-burger").click(function () {
 		$(".navbar-burger").toggleClass("is-active");
 		$(".navbar-menu").toggleClass("is-active");
+	});
+
+	$(".dropdown").click(function(event) {
+		event.stopPropagation();
+		dropdown.toggleClass('is-active');
 	});
 
 	// Sticky Menu

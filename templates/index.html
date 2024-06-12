@@ -57,18 +57,47 @@
 
       <!-- social icon -->
       <div class="column is-1-desktop is-12-mobile list list-hero-social">
-        <a class="list-item has-text-white" href="https://www.linkedin.com/in/jeyasuryaur/"
-          ><i class="ti ti-linkedin"></i
-        ></a>
-        <a class="list-item has-text-white" href="https://github.com/JeyasuryaUR"
-          ><i class="ti ti-github"></i
-        ></a>
-        <a class="list-item has-text-white" href="https://instagram.com/jeyasurya.u.r"
-          ><i class="ti ti-instagram"></i
-        ></a>
-        <a class="list-item has-text-white" href="https://twitter.com/jeyasuryaur"
-          ><i class="ti ti-twitter"></i
-        ></a>
+        <a class="list-item has-text-white" href="https://www.linkedin.com/in/jeyasuryaur/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="list-item has-text-white" href="https://github.com/JeyasuryaUR">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="list-item has-text-white" href="https://instagram.com/jeyasurya.u.r">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="list-item has-text-white" href="https://twitter.com/jeyasuryaur">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <div class="dropdown is-hoverable is-up">
+          <div class="dropdown-trigger">
+            <a class="list-item has-text-white button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </div>
+          <div class="dropdown-menu" role="menu">
+            <div class="dropdown-content px-3">
+              <a class="dropdown-item has-text-centered" href="https://youtube.com/@jeyasuryaur">
+                <i class="fab fa-youtube "></i>
+              </a>
+              <a class="dropdown-item has-text-centered" href="https://stackoverflow.com/users/15129080/jeyasuryaur">
+                <i class="fab fa-stack-overflow"></i>
+              </a>
+              <a class="dropdown-item has-text-centered" href="https://www.twitch.tv/jeyasuryaur">
+                <i class="fab fa-twitch"></i>
+              </a>
+              <a class="dropdown-item has-text-centered" href="https://leetcode.com/jeyasuryaur">
+                <i class="fas fa-code"></i>
+              </a>
+              <a class="dropdown-item has-text-centered" href="https://hackerrank.com/jeyasuryaur">
+                <i class="fab fa-hackerrank"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
       <!-- /social icon -->
     </div>
@@ -238,12 +267,20 @@
       {% for work in portfolio %}
       <div class="column is-4-desktop is-6-tablet shuffle-item">
         <div class="m-2 card  portfolio-card">
-          <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="card-image is-full" />
+          {% if work.image %}
+            {% if 'http' in work.image %}
+              <img src="{{ work.image }}" alt="{{work.name}}" class="card-image is-full" />
+            {% else %}
+              <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="card-image is-full" />
+            {% endif %}
+          {% endif %}
           <div class="card-content">
             <h4 class="title is-4 has-text-white">{{work.name}}</h4>
             <p class="subtitle is-6 color-one">{{work.tech}}</p>
             <p class="work-desc has-text-white">{{work.desc}}</p>
-            <a class="button is-small is-light color-black" href="{{work.src}}">view project</a>
+            <a class="py-3 px-4 mt-2 button is-small is-rounded is-primary has-text-black has-text-weight-bold " href="{{work.src}}">
+              <span>View Project</span>
+            </a>
           </div>
         </div>
       </div>
@@ -267,7 +304,8 @@
       <div class="column is-8-desktop">
         <div class="has-background-light card-content has-text-centered shadow-down">
           <h4 class="mb-5 has-text-black">Contact Form</h4>
-          <form action="#" class="columns is-multiline is-centered">
+          <form action="/contact" method="POST" class="columns is-multiline is-centered">
+            
             <div class="column is-6-tablet">
               <input type="text" id="name" name="name" placeholder="Full Name" class="input">
             </div>
