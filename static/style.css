@@ -459,6 +459,11 @@ textarea.input {
     font-size: 24px; /* Increase icon size */
 }
 
+@media (max-width: 425px) {
+    .list-hero-social .list-item i, .list-hero-social .dropdown-item i {
+        font-size: 16px;
+    }
+}
 .hero-img-wrap {
     width: 300px;
     height: 400px;
@@ -536,10 +541,17 @@ textarea.input {
 
 .hero-area {
     height: 100vh;
+    width: 100vw !important;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-area {
+        padding-top: 64px;
+    }
 }
 
 .hero-area h1 {
