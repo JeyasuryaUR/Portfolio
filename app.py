@@ -12,26 +12,41 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 def home():
     skills = [
         {
-            "name": "HTML/CSS",
-            "level": 80,
-            "image": "htmlcss.png",
-            "color": "#f5622d",
-            "score": 8,
-        },
-        {
-            "name": "Javascript",
-            "level": 60,
-            "image": "javascript.svg",
-            "color": "#ffde25",
-            "score": 6,
-        },
-        {
             "name": "Django",
             "level": 90,
             "image": "django.png",
             "color": "#2ba977",
             "score": 9,
         },
+        {
+            "name": "Android studio",
+            "level": 60,
+            "image": "android-studio.png",
+            "color": "#eeeeee",
+            "score": 6,
+        },
+        {
+            "name": "Firebase",
+            "level": 70,
+            "image": "firebase.png",
+            "color": "#fcca3f",
+            "score": 7,
+        },
+        {
+            "name": "PostgreSQL",
+            "level": 80,
+            "image": "postgresql.png",
+            "color": "#336791",
+            "score": 8,
+        },
+        {
+            "name": "sqlite",
+            "level": 70,
+            "image": "sqlite.png",
+            "color": "#6cbde9",
+            "score": 7,
+        },
+        
         {
             "name": "Davinci Resolve",
             "level": 80,
@@ -52,6 +67,23 @@ def home():
             "image": "canva.png",
             "color": "#3675d9",
             "score": 8,
+        },
+    ]
+
+    languages = [
+        {
+            "name": "HTML/CSS",
+            "level": 80,
+            "image": "htmlcss.png",
+            "color": "#f5622d",
+            "score": 8,
+        },
+        {
+            "name": "Javascript",
+            "level": 60,
+            "image": "javascript.svg",
+            "color": "#ffde25",
+            "score": 6,
         },
         {
             "name": "Python",
@@ -74,29 +106,9 @@ def home():
             "color": "#00599c",
             "score": 7,
         },
-        {
-            "name": "Android studio",
-            "level": 60,
-            "image": "android-studio.png",
-            "color": "#eeeeee",
-            "score": 6,
-        },
-        {
-            "name": "Firebase",
-            "level": 70,
-            "image": "firebase.png",
-            "color": "#fcca3f",
-            "score": 7,
-        },
-        {
-            "name": "sqlite",
-            "level": 70,
-            "image": "sqlite.png",
-            "color": "#6cbde9",
-            "score": 7,
-        },
+        
     ]
-
+    
     education = [
         {
             "name": "B.Tech",
@@ -177,8 +189,101 @@ def home():
         },
     ]
 
+    certifications = [
+        {
+            "name": "Intro to Large Language Models",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Jan 2024",
+            "cred": ""
+        },
+        {
+            "name": "Intro to Responsible AI",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Jan 2024",
+            "cred": ""
+        },
+        {
+            "name": "Intro to Generative AI",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "May 2024",
+            "cred": ""
+        },
+        {
+            "name": "Data Science with Python ",
+            "issuer": "Simplilearn",
+            "date": "Apr 2024",
+            "cred": ""
+        },
+        {
+            "name": "Blockchain Guide for Beginners",
+            "issuer": "Codies Alert",
+            "date": "Jan 2024",
+            "cred": ""
+        },
+        {
+            "name": "Web Programming with Python & Javascript",
+            "issuer": "CS50, EdX",
+            "date": "Jan 2024",
+            "cred": ""
+        },
+        {
+            "name": "Python Essentials 1 (PCAP)",
+            "issuer": "Cisco, Netacad",
+            "date": "Nov 2023",
+            "cred": ""
+        },
+        {
+            "name": "AI for India 2.0",
+            "issuer": "GUVI",
+            "date": "Aug 2023",
+            "cred": ""
+        },
+        {
+            "name": "Python (Basic)",
+            "issuer": "Hacker Rank",
+            "date": "Aug 2023",
+            "cred": ""
+        },
+        {
+            "name": "SQL (Basic)",
+            "issuer": "Hacker Rank",
+            "date": "Aug 2023",
+            "cred": ""
+        },
+        {
+            "name": "Python (English)",
+            "issuer": "GUVI",
+            "date": "Jul 2023",
+            "cred": ""
+        },
+        {
+            "name": "The Hour of Code",
+            "issuer": "Educative, Inc.",
+            "date": "Aug 2022",
+            "cred": ""
+        },
+        {
+            "name": "AI for India",
+            "issuer": "GUVI",
+            "date": "Apr 2021",
+            "cred": ""
+        },
+        {
+            "name": "Build a Face Recognition App",
+            "issuer": "GUVI",
+            "date": "Apr 2021",
+            "cred": ""
+        },
+        {
+            "name": "HTML Course",
+            "issuer": "SoloLearn",
+            "date": "Oct 2020",
+            "cred": ""
+        },
+    ]
+    
     return render_template(
-        "index.html", skills=skills, education=education, portfolio=portfolio
+        "index.html", skills=skills, education=education, portfolio=portfolio, certifications=certifications, languages=languages
     )
 
 @app.route('/contact', methods=['POST'])
