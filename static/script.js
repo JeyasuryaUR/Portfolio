@@ -51,56 +51,27 @@
 	});
 
 
-	/* ########################################### hero parallax ############################################## */
-	/*
-	window.onload = function () {
-
-		var parallaxBox = document.getElementById('parallax');
-		var
-			c2left = document.getElementById('l2').offsetLeft,
-			c2top = document.getElementById('l2').offsetTop,
-			c3left = document.getElementById('l3').offsetLeft,
-			c3top = document.getElementById('l3').offsetTop,
-			c4left = document.getElementById('l4').offsetLeft,
-			c4top = document.getElementById('l4').offsetTop,
-			c5left = document.getElementById('l5').offsetLeft,
-			c5top = document.getElementById('l5').offsetTop,
-			c6left = document.getElementById('l6').offsetLeft,
-			c6top = document.getElementById('l6').offsetTop,
-			c7left = document.getElementById('l7').offsetLeft,
-			c7top = document.getElementById('l7').offsetTop,
-			c8left = document.getElementById('l8').offsetLeft,
-			c8top = document.getElementById('l8').offsetTop,
-			c9left = document.getElementById('l9').offsetLeft,
-			c9top = document.getElementById('l9').offsetTop;
-
-		parallaxBox.onmousemove = function (event) {
-			event = event || window.event;
-			var x = event.clientX - parallaxBox.offsetLeft,
-				y = event.clientY - parallaxBox.offsetTop;
-
-			mouseParallax('l2', c2left, c2top, x, y, 25);
-			mouseParallax('l3', c3left, c3top, x, y, 20);
-			mouseParallax('l4', c4left, c4top, x, y, 35);
-			mouseParallax('l5', c5left, c5top, x, y, 30);
-			mouseParallax('l6', c6left, c6top, x, y, 45);
-			mouseParallax('l7', c7left, c7top, x, y, 30);
-			mouseParallax('l8', c8left, c8top, x, y, 25);
-			mouseParallax('l9', c9left, c9top, x, y, 40);
-		};
-
-	};
-
-	function mouseParallax(id, left, top, mouseX, mouseY, speed) {
-		var obj = document.getElementById(id);
-		var parentObj = obj.parentNode,
-			containerWidth = parseInt(parentObj.offsetWidth),
-			containerHeight = parseInt(parentObj.offsetHeight);
-		obj.style.left = left - (((mouseX - (parseInt(obj.offsetWidth) / 2 + left)) / containerWidth) * speed) + 'px';
-		obj.style.top = top - (((mouseY - (parseInt(obj.offsetHeight) / 2 + top)) / containerHeight) * speed) + 'px';
-	}
-	*/
-	/* ########################################### /hero parallax ############################################## */
+	var lastMouseX = 0;
+	var lastMouseY = 0;
+	$('.hero-area').mousemove(function(e) {
+		// Determine direction by comparing current mouse position with last position
+		var moveLeft = e.pageX < lastMouseX;
+		var moveUp = e.pageY < lastMouseY;
+		lastMouseX = e.pageX;
+		lastMouseY = e.pageY;
+	
+		// Calculate translation values
+		var translateX = moveLeft ? 10 : -10; // Move right if moving left, else move left
+		var translateY = moveUp ? 10 : -10; // Move down if moving up, else move up
+	
+		// Apply movement to the opposite direction
+		$('.hero-img-wrap').css('transform', `translate(${translateX}px, ${translateY}px)`);
+	});
+	
+	$('.hero-area').mouseleave(function() {
+		// Reset position when mouse leaves the area
+		$('.hero-img-wrap').css('transform', 'translate(0, 0)');
+	});
 
 	// testimonial-slider
 	$('.testimonial-slider').slick({
@@ -175,9 +146,11 @@
 	});
 
 	ScrollReveal().reveal('.section', {delay: 200, interval: 50});
-	ScrollReveal().reveal('#skills .card', {delay: 200, reset: true, interval: 50});
+	ScrollReveal().reveal('#skills .card', {delay: 200, reset: true, interval: 100});
+	ScrollReveal().reveal('#education .card', {delay: 50, reset: true, interval: 50});
 	ScrollReveal().reveal('#portfolio .card', {delay: 200, interval: 50});
 	ScrollReveal().reveal('.list-hero-social a', {reset: true, interval: 20});
+	ScrollReveal().reveal('.about-text span', {delay:200, reset: true, interval: 200});
 
 	$(document).ready(function(){
 		$('a').on('click', function(event) {

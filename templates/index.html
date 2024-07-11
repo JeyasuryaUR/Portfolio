@@ -36,14 +36,16 @@
 
 <!-- hero area -->
 <section class="hero-area home" id="parallax">
-  <div class="container">
-    <div class="columns is-vcentered is-multiline"
-    style="max-width: 100vw;">
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="columns is-vcentered is-multiline">
       <div
         class="column is-5-desktop is-offset-1-desktop is-12-mobile has-text-centered-mobile" 
       >
+        <h4 class="has-text-white font-two pb-4 ">
+          <span class="">hey there! i'm</span>
+        </h4>
         <h2 class="color-three font-one">Jeyasurya U R</h2>
-        <h3 class="has-text-white font-two">
+        <h3 class="has-text-white font-two pt-2">
           <span class="auto-typed is-underlined">Full Stack Developer</span>
         </h3>
       </div>
@@ -103,80 +105,25 @@
       <!-- /social icon -->
     </div>
   </div>
-  <!--
-  <div class="layer" id="l2">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/dots-cyan.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l3">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/leaf-orange.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l4">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/dots-orange.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l5">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/leaf-yellow.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l6">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/leaf-cyan.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l7">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/dots-group-orange.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l8">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/leaf-pink-round.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  <div class="layer" id="l9">
-    <img
-      src="{{ url_for('static', filename='images/illustrations/leaf-cyan-2.png') }}"
-      alt="bg-shape"
-      class="layer-img"
-    />
-  </div>
-  -->
+  
 </section>
 <!-- /hero area -->
 
 <!-- about -->
 <section class="section has-background-white" id="about">
   <div class="container">
-    <div class="has-text-centered">
+    <div class="has-text-centered about-title">
       <h2 class="section-title has-text-black">About</h2>
     </div>
     <div class="columns is-centered">
       <div class="column is-four-fifths-desktop has-text-centered">
-        <p class="font-two paragraph-lg has-text-dark">
-          I am a versatile Full Stack Developer with a strong focus on Video
+        <p class="font-two paragraph-lg has-text-dark about-text">
+          <span>
+            I am a versatile Full Stack Developer with a strong focus on Video
           Editing. My technical skills extend to C++, Python, C, Java, and
           JavaScript. Alongside my programming expertise, I have a creative
           flair for design.
+          </span>
           <br />
           <br />
           <span class="is-hidden-mobile">
@@ -267,19 +214,24 @@
     <div class="columns is-multiline is-flex-mobile shuffle-wrapper">
       {% for work in portfolio %}
       <div class="column is-4-desktop is-6-tablet shuffle-item">
-        <div class="m-2 card  portfolio-card">
+        <div class="m-2 card portfolio-card">
           {% if work.image %}
+          <div class="card-image-overlay">
             {% if 'http' in work.image %}
-              <img src="{{ work.image }}" alt="{{work.name}}" class="card-image is-full" />
+            <img src="{{ work.image }}" alt="{{work.name}}" class="card-image is-full" />
             {% else %}
-              <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="card-image is-full" />
+            <img src="{{ url_for('static', filename='images/portfolio/' + work.image)}}" alt="{{work.name}}" class="card-image is-full" />
             {% endif %}
+            <a class="py-3 px-4 mt-2 button-view-project button is-centered has-text-centered is-small is-rounded is-primary has-text-black has-text-weight-bold is-hidden-mobile is-hidden-touch" href="{{work.src}}">
+              <span>View Project</span>
+            </a>
+          </div>
           {% endif %}
           <div class="card-content">
             <h4 class="title is-4 has-text-white">{{work.name}}</h4>
             <p class="subtitle is-6 color-one">{{work.tech}}</p>
             <p class="work-desc has-text-white">{{work.desc}}</p>
-            <a class="py-3 px-4 mt-2 button is-small is-rounded is-primary has-text-black has-text-weight-bold " href="{{work.src}}">
+            <a class="py-3 px-4 mt-2 button is-small is-rounded is-primary has-text-black has-text-weight-bold is-hidden-desktop is-hidden-tablet" href="{{work.src}}">
               <span>View Project</span>
             </a>
           </div>

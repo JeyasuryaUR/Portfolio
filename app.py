@@ -122,6 +122,14 @@ def home():
 
     portfolio = [
         {
+            "name": "Simplicook (Recipe Book)",
+            "stream": themes[0],
+            "src": "https://github.com/JeyasuryaUR/Simplicook",
+            "tech": "ReactJS, Tailwind CSS, Django REST API",
+            "image": "simplicook.png",
+            "desc": "A comprehensive recipe book application with enhanced features and basic CRUD operations.",
+        },
+        {
             "name": "Vendor Management System",
             "stream": themes[0],
             "src": "https://github.com/JeyasuryaUR/Vendor-Management-System",
@@ -163,6 +171,7 @@ def home():
             "name": "Wiki Online Encyclopedia",
             "stream": themes[0],
             "src": "https://github.com/JeyasuryaUR/WikiOnlineEncyclopedia",
+            "image": "wiki.png",
             "tech": "Django (Python)",
             "desc": "A Minimal Wikipedia Clone.",
         },
