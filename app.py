@@ -134,6 +134,14 @@ def home():
 
     portfolio = [
         {
+            "name": "Diddle (Skill Exchange)",
+            "stream": themes[0],
+            "src": "https://github.com/kalpithasv/Diddle",
+            "tech": "Next.js, Django REST API, PostgreSQL",
+            "image": "diddle.png",
+            "desc": "Created a platform integrating skill exchange with freelancing projects, allowing users to learn, teach, and earn.",
+        },
+        {
             "name": "Simplicook (Recipe Book)",
             "stream": themes[0],
             "src": "https://github.com/JeyasuryaUR/Simplicook",
@@ -191,21 +199,21 @@ def home():
 
     certifications = [
         {
-            "name": "Intro to Large Language Models",
-            "issuer": "Google Cloud Skills Boost",
-            "date": "Jan 2024",
+            "name": "Scrape the Web with Python",
+            "issuer": "Le Wagon",
+            "date": "Jul 2024",
             "cred": ""
         },
         {
-            "name": "Intro to Responsible AI",
+            "name": "Prompt Design in Vertex AI",
             "issuer": "Google Cloud Skills Boost",
-            "date": "Jan 2024",
+            "date": "Jul 2024",
             "cred": ""
         },
         {
-            "name": "Intro to Generative AI",
+            "name": "The Basics of Google Cloud Compute",
             "issuer": "Google Cloud Skills Boost",
-            "date": "May 2024",
+            "date": "Jul 2024",
             "cred": ""
         },
         {
@@ -233,51 +241,15 @@ def home():
             "cred": ""
         },
         {
-            "name": "AI for India 2.0",
-            "issuer": "GUVI",
-            "date": "Aug 2023",
-            "cred": ""
-        },
-        {
-            "name": "Python (Basic)",
-            "issuer": "Hacker Rank",
-            "date": "Aug 2023",
-            "cred": ""
-        },
-        {
-            "name": "SQL (Basic)",
-            "issuer": "Hacker Rank",
-            "date": "Aug 2023",
-            "cred": ""
-        },
-        {
             "name": "Python (English)",
             "issuer": "GUVI",
             "date": "Jul 2023",
             "cred": ""
         },
         {
-            "name": "The Hour of Code",
-            "issuer": "Educative, Inc.",
-            "date": "Aug 2022",
-            "cred": ""
-        },
-        {
-            "name": "AI for India",
-            "issuer": "GUVI",
-            "date": "Apr 2021",
-            "cred": ""
-        },
-        {
             "name": "Build a Face Recognition App",
             "issuer": "GUVI",
             "date": "Apr 2021",
-            "cred": ""
-        },
-        {
-            "name": "HTML Course",
-            "issuer": "SoloLearn",
-            "date": "Oct 2020",
             "cred": ""
         },
     ]
