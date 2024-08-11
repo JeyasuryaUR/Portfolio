@@ -22,7 +22,7 @@
 	});
 
 	var typed = new Typed(".auto-typed", {
-		strings: ["Full Stack Developer", "Graphic Designer", "Video Editor"],
+		strings: ["Software Developer", "Competitive Programmer", "Video Editor"],
 		typeSpeed: 100,
 		backSpeed: 100,
 		smartBackspace: true,
