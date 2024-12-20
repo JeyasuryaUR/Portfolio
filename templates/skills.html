@@ -1,0 +1,48 @@
+<section class="section" id="skills">
+    <div class="container">
+        <div class="has-text-centered">
+            <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="columns is-multiline is-flex-mobile">
+            {% for skill in skills %}
+            <div class="column is-3-desktop is-4-tablet is-6-mobile">
+                <div class="card shadow has-text-centered skill-card">
+                    <div class="is-relative rounded-top html-css-skill skill-embed" data-background="{{ url_for('static', filename='images/skills/' + skill.image) }}">
+                        <div class="progress-wrapper" data-color="{{skill.color}}">
+                            <div class="wave" data-progress="{{skill.level}}%"></div>
+                        </div>
+                        <span class="skill-score">{{skill.score}}/10</span>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="has-text-white">{{skill.name}}</h4>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section" id="skills">
+    <div class="container">
+        <div class="has-text-centered">
+            <h3 class="section-title has-text-white">Languages</h3>
+        </div>
+        <div class="columns is-multiline is-flex-mobile">
+            {% for lang in languages %}
+            <div class="column is-2-desktop is-3-tablet is-5-mobile">
+                <div class="card shadow has-text-centered skill-card">
+                    <div class="is-relative rounded-top html-css-skill skill-embed" data-background="{{ url_for('static', filename='images/skills/' + lang.image) }}">
+                        <div class="progress-wrapper" data-color="{{lang.color}}">
+                            <div class="wave" data-progress="{{lang.level}}%"></div>
+                        </div>
+                        <span class="skill-score">{{lang.score}}/10</span>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="has-text-white">{{lang.name}}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

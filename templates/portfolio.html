@@ -1,0 +1,49 @@
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="has-text-centered">
+      <h2 class="section-title">Portfolio</h2>
+    </div>
+    <div class="columns is-multiline is-flex-mobile shuffle-wrapper portfolio-wrapper">
+      {% for work in portfolio %}
+      <div class="column is-4-desktop is-6-tablet shuffle-item">
+        <div class="m-2 card portfolio-card">
+          {% if work.image %}
+          <div class="card-image-overlay">
+            {% if 'http' in work.image %}
+            <img
+              src="{{ work.image }}"
+              alt="{{work.name}}"
+              class="card-image is-full"
+            />
+            {% else %}
+            <img
+              src="{{ url_for('static', filename='images/portfolio/' + work.image)}}"
+              alt="{{work.name}}"
+              class="card-image is-full"
+            />
+            {% endif %}
+            <a
+              class="py-3 px-4 mt-2 view-project button is-centered has-text-centered is-small is-rounded is-primary has-text-black has-text-weight-bold is-hidden-mobile is-hidden-touch"
+              href="{{work.src}}"
+            >
+              <span>View Project</span>
+            </a>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <h4 class="title is-4 has-text-white">{{work.name}}</h4>
+            <p class="subtitle is-6 color-one">{{work.tech}}</p>
+            <p class="work-desc has-text-white">{{work.desc}}</p>
+            <a
+              class="py-3 px-4 mt-2 button is-small is-rounded is-primary has-text-black has-text-weight-bold is-hidden-desktop is-hidden-tablet"
+              href="{{work.src}}"
+            >
+              <span>View Project</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

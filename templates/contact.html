@@ -1,0 +1,28 @@
+<section class="section has-background-white section-on-footer" id="contact" data-background="{{ url_for('static', filename='images/BGs/bg-dots.png') }}">
+    <div class="container">
+        <div class="has-text-centered">
+            <h2 class="section-title has-text-black">Contact Info</h2>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-8-desktop">
+                <div class="has-background-light card-content has-text-centered shadow-down">
+                    <h4 class="mb-5 has-text-black">Contact Form</h4>
+                    <form action="/contact" method="POST" class="columns is-multiline is-centered">
+                        <div class="column is-6-tablet">
+                            <input type="text" id="name" name="name" placeholder="Full Name" class="input">
+                        </div>
+                        <div class="column is-6-tablet">
+                            <input type="email" id="email" name="email" placeholder="Email Address" class="input">
+                        </div>
+                        <div class="column is-full">
+                            <textarea name="message" id="message" class="input" placeholder="Type Message Here"></textarea>
+                        </div>
+                        <div class="column is-6-tablet is-10">
+                            <button class="button is-primary is-fullwidth">send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

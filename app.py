@@ -19,7 +19,21 @@ def home():
             "score": 9,
         },
         {
-            "name": "Android studio",
+            "name": "React.JS",
+            "level": 90,
+            "image": "reactjs.png",
+            "color": "#61dafb",
+            "score": 9,
+        },
+        {
+            "name": "Next.JS",
+            "level": 60,
+            "image": "nextjs.svg",
+            "color": "#f0f0f0",
+            "score": 6,
+        },
+        {
+            "name": "Android Studio",
             "level": 60,
             "image": "android-studio.png",
             "color": "#eeeeee",
@@ -40,13 +54,12 @@ def home():
             "score": 8,
         },
         {
-            "name": "sqlite",
+            "name": "SQLite",
             "level": 70,
             "image": "sqlite.png",
             "color": "#6cbde9",
             "score": 7,
         },
-        
         {
             "name": "Davinci Resolve",
             "level": 80,
@@ -58,7 +71,7 @@ def home():
             "name": "Figma",
             "level": 50,
             "image": "figma.png",
-            "color": "#3075e8",
+            "color": "#a259ff",
             "score": 5,
         },
         {
@@ -79,18 +92,25 @@ def home():
             "score": 8,
         },
         {
-            "name": "Javascript",
-            "level": 60,
-            "image": "javascript.svg",
-            "color": "#ffde25",
-            "score": 6,
-        },
-        {
             "name": "Python",
             "level": 80,
             "image": "python.png",
             "color": "#ffe161",
             "score": 8,
+        },
+        {
+            "name": "Javascript",
+            "level": 80,
+            "image": "javascript.svg",
+            "color": "#ffde25",
+            "score": 8,
+        },
+        {
+            "name": "Typescript",
+            "level": 60,
+            "image": "typescript.png",
+            "color": "#007acd",
+            "score": 6,
         },
         {
             "name": "C",
@@ -199,6 +219,12 @@ def home():
 
     certifications = [
         {
+            "name": "Introduction to AI with Python",
+            "issuer": "CS50, EdX",
+            "date": "Sep 2024",
+            "cred": ""
+        },
+        {
             "name": "Scrape the Web with Python",
             "issuer": "Le Wagon",
             "date": "Jul 2024",
@@ -223,14 +249,14 @@ def home():
             "cred": ""
         },
         {
-            "name": "Blockchain Guide for Beginners",
-            "issuer": "Codies Alert",
+            "name": "Web Programming with Python & Javascript",
+            "issuer": "CS50, EdX",
             "date": "Jan 2024",
             "cred": ""
         },
         {
-            "name": "Web Programming with Python & Javascript",
-            "issuer": "CS50, EdX",
+            "name": "Blockchain Guide for Beginners",
+            "issuer": "Codies Alert",
             "date": "Jan 2024",
             "cred": ""
         },
@@ -247,9 +273,9 @@ def home():
             "cred": ""
         },
         {
-            "name": "Build a Face Recognition App",
-            "issuer": "GUVI",
-            "date": "Apr 2021",
+            "name": "Python, SQL, Java",
+            "issuer": "HackerRank",
+            "date": "Basic Skill Tests",
             "cred": ""
         },
     ]

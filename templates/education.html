@@ -1,0 +1,25 @@
+<section class="section is-relative has-background-white" id="education">
+    <div class="container">
+        <div class="has-text-centered">
+            <h2 class="section-title has-text-black">Education</h2>
+        </div>
+        <div class="columns is-multiline">
+            {% for edu in education %}
+            <div class="column is-10 is-offset-1 mb-80">
+                <div class="media card edu-card py-2 is-relative">
+                    <div class="media-right mr-2 edu-img-wrap">
+                        <img src="{{ url_for('static', filename='images/edu/' + edu.image) }}" alt="{{edu.name}}" class="card-image edu-img" />
+                    </div>
+                    <div class="media-content">
+                        <h5 class="font-two color-one">{{edu.name}} ({{edu.course}})</h5>
+                        <p class="mb-0 has-text-dark font-two">{{edu.institute}}</p>
+                        <p class="mb-0 has-text-dark font-three">{{edu.location}}</p>
+                        <p class="mb-0 has-text-grey font-two">{{edu.score|safe}}</p>
+                    </div>
+                    <div class="year-display font-one mr-2">{{edu.year}}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
