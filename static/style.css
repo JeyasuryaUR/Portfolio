@@ -1,30 +1,30 @@
 @font-face {
-    font-family: 'Norwester';
-    src: url("./fonts/norwester.otf") format('opentype');
+    font-family: "Norwester";
+    src: url("./fonts/norwester.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Kollektif';
-    src: url("./fonts/Kollektif.ttf") format('truetype');
+    font-family: "Kollektif";
+    src: url("./fonts/Kollektif.ttf") format("truetype");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 /* Setting up the color palette */
 :root {
     --dark-grey: #222831;
-    --grey: #31363F;
-    --teal: #76ABAE;
+    --grey: #31363f;
+    --teal: #76abae;
     --teal2: #359297;
     --teal3: #00f2ff;
-    --white: #EEEEEE;
+    --white: #eeeeee;
 }
 
 /* Applying the dark theme */
 body {
     background-color: var(--dark-grey);
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     font-size: 15px;
@@ -43,7 +43,7 @@ body {
 /* Styling links */
 a {
     color: var(--teal);
-    font-family: 'Kollektif', sans-serif;
+    font-family: "Kollektif", sans-serif;
 }
 
 p,
@@ -68,10 +68,9 @@ h4,
 h5,
 h6 {
     color: var(--teal3);
-    font-family: 'Norwester', sans-serif;
+    font-family: "Norwester", sans-serif;
     line-height: 1.2;
 }
-
 
 h1,
 .h1 {
@@ -172,15 +171,15 @@ h6,
 }
 
 .font-one {
-    font-family: 'Norwester', sans-serif !important;
+    font-family: "Norwester", sans-serif !important;
 }
 
 .font-two {
-    font-family: 'Kollektif', sans-serif !important;
+    font-family: "Kollektif", sans-serif !important;
 }
 
 .font-three {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 .color-one {
@@ -209,20 +208,18 @@ h6,
 
 .neumorphic-dark {
     background: linear-gradient(145deg, #1f242b, #242b33);
-    box-shadow: 20px 20px 60px #1d2229,
-        -20px -20px 60px #272e37;
+    box-shadow: 20px 20px 60px #1d2229, -20px -20px 60px #272e37;
 }
 
 .neumorphic-light {
     background: #eeeeee;
-    box-shadow: 20px 20px 60px #cacaca,
-        -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
 }
 
 /* Button style */
 .button {
     font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     padding: 16px 44px;
     border-radius: 5px;
@@ -382,7 +379,6 @@ select:focus {
     color: #c8d5ef;
 }
 
-
 /* /icon */
 /* slick slider */
 .slick-dots {
@@ -446,7 +442,7 @@ textarea.input {
 }
 
 .navlogo {
-    font-family: 'Norwester', sans-serif;
+    font-family: "Norwester", sans-serif;
     font-size: larger;
 }
 
@@ -467,8 +463,7 @@ textarea.input {
 .list-hero-social .list-item {
     border-radius: 50px;
     background: linear-gradient(225deg, #1f242c, #242b34);
-    box-shadow: -20px 20px 60px #1d222a,
-        20px -20px 60px #272e38;
+    box-shadow: -20px 20px 60px #1d222a, 20px -20px 60px #272e38;
     margin: 0 4px 10px 4px;
     display: flex;
     justify-content: center;
@@ -603,7 +598,8 @@ textarea.input {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("./images/BGs/bgasset.jpg"), linear-gradient(var(--dark-grey), var(--grey));
+    background-image: url("./images/BGs/bgasset.jpg"),
+        linear-gradient(var(--dark-grey), var(--grey));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -611,16 +607,16 @@ textarea.input {
 }
 
 .hero-area::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./images/illustrations/dots-group-v.png') no-repeat center center;
+    background: url("./images/illustrations/dots-group-v.png") no-repeat center center;
     background-size: 10%;
     z-index: 0;
-  }
+}
 
 @media (max-width: 768px) {
     .hero-area {
@@ -643,8 +639,7 @@ textarea.input {
 .skill-card {
     border-radius: 20px;
     background: linear-gradient(145deg, #1f242c, #242b34);
-    box-shadow: 20px 20px 60px #1d222a,
-        -20px -20px 60px #272e38;
+    box-shadow: 20px 20px 60px #1d222a, -20px -20px 60px #272e38;
     overflow: hidden;
 }
 
@@ -662,7 +657,7 @@ textarea.input {
     left: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Norwester', sans-serif;
+    font-family: "Norwester", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -750,8 +745,7 @@ textarea.input {
     height: 25vh;
     border-radius: 20px;
     background: #eeeeee;
-    box-shadow: 20px 20px 60px #cacaca,
-        -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
     display: flex;
     justify-content: space-between;
 }
@@ -819,7 +813,7 @@ textarea.input {
     /* background: linear-gradient(145deg, #1f242c, #242b34);
     box-shadow: 20px 20px 60px #1d222a,
         -20px -20px 60px #272e38; */
-    
+
     background-color: #1d222a;
     box-shadow: 10px 10px 60px #363e49;
 
@@ -828,9 +822,9 @@ textarea.input {
 
 .portfolio-card .card-image-overlay {
     position: relative;
-    width: 100%; 
-    height: 100%; 
-    display: block; 
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .portfolio-card .card-image-overlay img {
